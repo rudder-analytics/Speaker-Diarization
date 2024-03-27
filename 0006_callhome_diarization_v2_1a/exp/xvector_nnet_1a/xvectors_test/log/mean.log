@@ -1,0 +1,6 @@
+# ivector-mean scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/xvector.scp 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/mean.vec 
+# Started at Wed Mar 27 20:00:57 IST 2024
+#
+ivector-mean scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/xvector.scp 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/mean.vec 
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Mar 27 20:00:57 IST 2024, elapsed time 0 seconds

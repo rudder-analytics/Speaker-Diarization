@@ -1,0 +1,9 @@
+# apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 scp:data/test/split1/1/feats.scp ark:- | copy-feats --compress=true --write-num-frames=ark,t:/home/rau047/kaldi/egs/spkdirzt/exp/test_cmn/log/utt2num_frames.1 ark:- ark,scp:/home/rau047/kaldi/egs/spkdirzt/exp/test_cmn/xvector_cmvn_feats_test.1.ark,/home/rau047/kaldi/egs/spkdirzt/exp/test_cmn/xvector_cmvn_feats_test.1.scp 
+# Started at Wed Mar 27 20:00:43 IST 2024
+#
+copy-feats --compress=true --write-num-frames=ark,t:/home/rau047/kaldi/egs/spkdirzt/exp/test_cmn/log/utt2num_frames.1 ark:- ark,scp:/home/rau047/kaldi/egs/spkdirzt/exp/test_cmn/xvector_cmvn_feats_test.1.ark,/home/rau047/kaldi/egs/spkdirzt/exp/test_cmn/xvector_cmvn_feats_test.1.scp 
+apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 scp:data/test/split1/1/feats.scp ark:- 
+LOG (apply-cmvn-sliding[5.5.1056~1-f6f4c]:main():apply-cmvn-sliding.cc:75) Applied sliding-window cepstral mean normalization to 1 utterances, 0 had errors.
+LOG (copy-feats[5.5.1056~1-f6f4c]:main():copy-feats.cc:143) Copied 1 feature matrices.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Mar 27 20:00:43 IST 2024, elapsed time 0 seconds

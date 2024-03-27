@@ -1,0 +1,14 @@
+# ivector-plda-scoring-dense --target-energy=0.9 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2//plda ark:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/tmp/split1/1/spk2utt "ark:ivector-subtract-global-mean 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2//mean.vec scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/tmp/split1/1/feats.scp ark:- | transform-vec 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2//transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |" ark,scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/scores.1.ark,0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/scores.1.scp 
+# Started at Wed Mar 27 20:00:57 IST 2024
+#
+ivector-plda-scoring-dense --target-energy=0.9 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2//plda ark:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/tmp/split1/1/spk2utt 'ark:ivector-subtract-global-mean 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2//mean.vec scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/tmp/split1/1/feats.scp ark:- | transform-vec 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2//transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |' ark,scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/scores.1.ark,0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/scores.1.scp 
+ivector-subtract-global-mean 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2//mean.vec scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores/tmp/split1/1/feats.scp ark:- 
+transform-vec 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2//transform.mat ark:- ark:- 
+ivector-normalize-length ark:- ark:- 
+LOG (ivector-subtract-global-mean[5.5.1056~1-f6f4c]:main():ivector-subtract-global-mean.cc:108) Wrote 397 mean-subtracted iVectors
+LOG (transform-vec[5.5.1056~1-f6f4c]:main():transform-vec.cc:85) Applied transform to 397 vectors.
+LOG (ivector-normalize-length[5.5.1056~1-f6f4c]:main():ivector-normalize-length.cc:90) Processed 397 iVectors.
+LOG (ivector-normalize-length[5.5.1056~1-f6f4c]:main():ivector-normalize-length.cc:94) Average ratio of iVector to expected length was 1.06381, standard deviation was 0.0830726
+LOG (ivector-plda-scoring-dense[5.5.1056~1-f6f4c]:main():ivector-plda-scoring-dense.cc:219) Processed 1 recordings, 0 had errors.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Mar 27 20:00:58 IST 2024, elapsed time 1 seconds

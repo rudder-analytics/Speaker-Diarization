@@ -1,0 +1,12 @@
+# extract-segments scp,p:data/test/wav.scp exp/make_mfcc/segments.1 ark:- | compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/utt2dur.1 --verbose=2 --config=conf/mfcc.conf ark:- ark:- | copy-feats --compress=true --write-num-frames=ark,t:exp/make_mfcc/utt2num_frames.1 ark:- ark,scp:/home/rau047/kaldi/egs/spkdirzt/data/test_cmn/raw_mfcc_test.1.ark,/home/rau047/kaldi/egs/spkdirzt/data/test_cmn/raw_mfcc_test.1.scp 
+# Started at Wed Mar 27 20:00:40 IST 2024
+#
+copy-feats --compress=true --write-num-frames=ark,t:exp/make_mfcc/utt2num_frames.1 ark:- ark,scp:/home/rau047/kaldi/egs/spkdirzt/data/test_cmn/raw_mfcc_test.1.ark,/home/rau047/kaldi/egs/spkdirzt/data/test_cmn/raw_mfcc_test.1.scp 
+extract-segments scp,p:data/test/wav.scp exp/make_mfcc/segments.1 ark:- 
+compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/utt2dur.1 --verbose=2 --config=conf/mfcc.conf ark:- ark:- 
+LOG (extract-segments[5.5.1056~1-f6f4c]:main():extract-segments.cc:194) Successfully processed 1 lines out of 1 in the segments file. 
+VLOG[2] (compute-mfcc-feats[5.5.1056~1-f6f4c]:main():compute-mfcc-feats.cc:182) Processed features for key new_4577_SEG
+LOG (compute-mfcc-feats[5.5.1056~1-f6f4c]:main():compute-mfcc-feats.cc:185)  Done 1 out of 1 utterances.
+LOG (copy-feats[5.5.1056~1-f6f4c]:main():copy-feats.cc:143) Copied 1 feature matrices.
+# Accounting: time=2 threads=1
+# Ended (code 0) at Wed Mar 27 20:00:42 IST 2024, elapsed time 2 seconds

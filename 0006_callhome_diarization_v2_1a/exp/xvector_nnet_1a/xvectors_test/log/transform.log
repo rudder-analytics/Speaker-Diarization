@@ -1,0 +1,10 @@
+# est-pca --read-vectors=true --normalize-mean=false --normalize-variance=true --dim=-1 scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/xvector.scp 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/transform.mat 
+# Started at Wed Mar 27 20:00:57 IST 2024
+#
+est-pca --read-vectors=true --normalize-mean=false --normalize-variance=true --dim=-1 scp:0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/xvector.scp 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/transform.mat 
+LOG (est-pca[5.5.1056~1-f6f4c]:main():est-pca.cc:133) Accumulated stats from 397 vectors, 0 with errors.
+LOG (est-pca[5.5.1056~1-f6f4c]:main():est-pca.cc:155) Eigenvalues in PCA are  [ 136.675 17.3794 14.8975 14.4915 12.5847 12.1494 10.8048 10.3431 9.79517 9.11628 8.7793 8.12948 7.77907 7.40534 7.05832 6.77278 6.65245 6.45749 6.17663 5.93205 5.74759 5.66236 5.357 5.25316 5.0258 4.81708 4.72665 4.5125 4.41463 4.25872 4.20931 4.09398 3.96286 3.93886 3.69243 3.57886 3.419 3.36307 3.20364 3.18345 2.99651 2.96792 2.91854 2.86335 2.76567 2.66624 2.58642 2.5503 2.50549 2.36751 2.35336 2.28049 2.2589 2.23212 2.16284 2.01221 1.98701 1.94874 1.84577 1.71594 1.69072 1.61698 1.59427 1.55951 1.52355 1.50997 1.44284 1.41793 1.34283 1.31706 1.26662 1.26408 1.19422 1.13869 1.11857 1.07015 1.06639 1.00881 0.989581 0.96143 0.931506 0.912059 0.849217 0.827611 0.804256 0.781308 0.764781 0.740199 0.690795 0.660147 0.654335 0.644988 0.612629 0.598807 0.573442 0.564153 0.524158 0.51566 0.477747 0.455508 0.443267 0.41826 0.392597 0.380523 0.366004 0.341334 0.335448 0.333924 0.313862 0.294732 0.286972 0.276732 0.272522 0.245295 0.234072 0.218869 0.202499 0.197813 0.194883 0.177132 0.170183 0.157903 0.153536 0.137999 0.128359 0.118893 0.105273 0.0878495 ]
+
+LOG (est-pca[5.5.1056~1-f6f4c]:main():est-pca.cc:156) Sum of PCA eigenvalues is 500.45, sum of kept eigenvalues is 500.45
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Mar 27 20:00:57 IST 2024, elapsed time 0 seconds

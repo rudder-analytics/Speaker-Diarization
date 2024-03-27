@@ -1,0 +1,34 @@
+utils/fix_data_dir.sh: file data/test/utt2spk is not in sorted order or not unique, sorting it
+utils/fix_data_dir.sh: file data/test/spk2utt is not in sorted order or not unique, sorting it
+utils/fix_data_dir.sh: file data/test/wav.scp is not in sorted order or not unique, sorting it
+fix_data_dir.sh: kept all 1 utterances.
+fix_data_dir.sh: old files are kept in data/test/.backup
+steps/make_mfcc.sh --nj 1 --mfcc-config conf/mfcc.conf --write-utt2num-frames true data/test exp/make_mfcc data/test_cmn
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory data/test
+steps/make_mfcc.sh [info]: segments file exists: using that.
+steps/make_mfcc.sh: Succeeded creating MFCC features for test
+fix_data_dir.sh: kept all 1 utterances.
+fix_data_dir.sh: old files are kept in data/test/.backup
+local/nnet3/xvector/prepare_feats.sh --nj 1 data/test data/test_cmn exp/test_cmn
+local/nnet3/xvector/prepare_feats.sh: Succeeded creating xvector features for test
+fix_data_dir.sh: kept all 1 utterances.
+fix_data_dir.sh: old files are kept in data/test_cmn/.backup
+diarization/nnet3/xvector/extract_xvectors.sh --nj 1 --window 1.5 --period 0.75 --apply-cmn false --min-segment 0.5 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/ data/test_cmn 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test
+diarization/nnet3/xvector/extract_xvectors.sh: using 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a//extract.config to extract xvectors
+utils/data/subsegment_data_dir.sh: note: frame shift is 0.00997733 [affects feats.scp]
+utils/data/get_utt2num_frames.sh: data/test_cmn/utt2num_frames already present!
+utils/data/subsegment_data_dir.sh: subsegmented data from data/test_cmn to 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/subsegments_data
+diarization/nnet3/xvector/extract_xvectors.sh: extracting xvectors from nnet
+diarization/nnet3/xvector/extract_xvectors.sh: combining xvectors across jobs
+diarization/nnet3/xvector/extract_xvectors.sh: Computing mean of xvectors
+diarization/nnet3/xvector/extract_xvectors.sh: Computing whitening transform
+diarization/nnet3/xvector/score_plda.sh --target-energy 0.9 --nj 1 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_callhome2/ 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores
+diarization/nnet3/xvector/score_plda.sh: scoring xvectors
+diarization/nnet3/xvector/score_plda.sh: combining PLDA scores across jobs
+diarization/cluster.sh --nj 1 --reco2num-spk data/test/reco2num_spk 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a/xvectors_test/plda_scores 0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a//xvectors_test/plda_scores_num_speakers
+diarization/cluster.sh: clustering scores
+diarization/cluster.sh: combining labels
+diarization/cluster.sh: computing RTTM
