@@ -45,7 +45,7 @@ python main.py audio_file.wav
 
 # Sample output:
 
-![Screenshot from 2024-03-28 18-05-12](https://github.com/rudder-analytics/Speaker-Diarization/assets/165159432/5c48b78e-53ca-451c-896a-0b976cc25eaf)
+![Screenshot from 2024-03-28 18-12-35](https://github.com/rudder-analytics/Speaker-Diarization/assets/165159432/cbad3c3f-8177-494b-ae9e-ab3ffe491eed)
 
 
 References:
